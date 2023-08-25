@@ -29,33 +29,33 @@
                 global-quick-tap;
                 bindings = <&kp>, <&kp>;
             };
-            minlft: minus_left {
+            MINUS_LEFT: MINUS_LEFT {
                 compatible = "zmk,behavior-mod-morph";
                 label = "MINUS_LEFT";
                 #binding-cells = <0>;
                 bindings = <&kp MINUS>, <&kp LEFT>;
-                mods = <(MOD_LGUI)>;
+                mods = <(MOD_LALT|MOD_LCTL|MOD_RALT|MOD_RCTL)>;
             };
-            eqdwn: equal_down {
+            EQUAL_DOWN: EQUAL_DOWN {
                 compatible = "zmk,behavior-mod-morph";
                 label = "EQUAL_DOWN";
                 #binding-cells = <0>;
                 bindings = <&kp EQUAL>, <&kp DOWN>;
-                mods = <(MOD_LGUI)>;
+                mods = <(MOD_LALT|MOD_LCTL|MOD_RALT|MOD_RCTL)>;
             };
-            bktup: bkt_up {
+            BRKT_UP: BRKT_UP {
                 compatible = "zmk,behavior-mod-morph";
-                label = "BKT_UP";
+                label = "BRKT_UP";
                 #binding-cells = <0>;
                 bindings = <&kp LBKT>, <&kp UP>;
-                mods = <(MOD_LGUI)>;
+                mods = <(MOD_LALT|MOD_LCTL|MOD_RALT|MOD_RCTL)>;
             };
-            bktrgt: bkt_right {
+            BRKT_RIGHT: BRKT_RIGHT {
                 compatible = "zmk,behavior-mod-morph";
-                label = "BKT_RIGHT";
+                label = "BRKT_RIGHT";
                 #binding-cells = <0>;
                 bindings = <&kp RBKT>, <&kp RIGHT>;
-                mods = <(MOD_LGUI)>;
+                mods = <(MOD_LALT|MOD_LCTL|MOD_RALT|MOD_RCTL)>;
             };                         
         };
 
@@ -112,7 +112,7 @@
                             &trans    &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp KP_MULTIPLY &kp LPAR &kp RPAR  &trans
                         //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                         //│          │  `       │          │          │          │          │   │  - _     │  = +     │  [ {     │  } ]     │  \ "|"   │          │
-                            &trans    &gresc     &kp LALT  &kp LGUI   &kp LCTRL    &trans          &minlft   &eqdwn     &bktup     &bktrgt    &kp BSLH   &trans 
+                            &trans    &gresc     &kp LALT  &kp LGUI   &kp LCTRL    &trans          &MINUS_LEFT   &EQUAL_DOWN     &BRKT_UP     &BRKT_RIGHT &kp BSLH   &trans 
                         //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤──────────┤
                         //│          │  ~       │          │          │          │          │   │  , <     │  . >     │  : ;     │  ' "     │ / ?      │          │
                             &trans    &kp TILDE  &trans      &trans     &trans     &trans         &kp COMMA  &kp DOT   &kp SEMI   &kp SQT   &kp FSLH    &trans
